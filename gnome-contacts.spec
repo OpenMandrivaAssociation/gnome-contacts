@@ -6,7 +6,7 @@ Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
-URL:		https://live.gnome.org/ThreePointOne/Features/Contacts
+Url:		https://live.gnome.org/ThreePointOne/Features/Contacts
 Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
@@ -46,8 +46,8 @@ Standalone contacts manager for GNOME desktop.
 %files -f %{name}.lang
 %doc AUTHORS README NEWS TODO ChangeLog
 %{_bindir}/%{name}
-%{_datadir}/applications/%{name}.desktop
 %{_libexecdir}/gnome-contacts-search-provider
+%{_datadir}/applications/%{name}.desktop
 %{_datadir}/dbus-1/services/org.gnome.Contacts.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
 %{_datadir}/gnome-shell/search-providers/gnome-contacts-search-provider.ini
