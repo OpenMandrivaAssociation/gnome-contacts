@@ -2,7 +2,7 @@
 
 Name:		gnome-contacts
 Version:	3.6.2
-Release:	2
+Release:	3
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
