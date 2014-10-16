@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   gnome-contacts-3.6.2.tar.xz: 2b23223cd5f3fd7cd27803139806c875b73e6bc4
+sources:
+  gnome-contacts-3.14.1.tar.xz: 788e4a293649be7bb59ec80dc28a209e4c8070d2

@@ -1,8 +1,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.6.2
-Release:	7
+Version:	3.14.1
+Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -16,7 +16,7 @@ BuildRequires:	pkgconfig(folks-eds)
 BuildRequires:	pkgconfig(folks-telepathy)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnome-desktop-3.0)
-BuildRequires:	pkgconfig(gee-1.0)
+BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(goa-1.0)
 BuildRequires:	pkgconfig(libebook-1.2)
 BuildRequires:	pkgconfig(libedataserver-1.2)
@@ -35,7 +35,7 @@ Standalone contacts manager for GNOME desktop.
 %apply_patches
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
@@ -44,10 +44,13 @@ Standalone contacts manager for GNOME desktop.
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS README NEWS TODO ChangeLog
+%doc AUTHORS README NEWS ChangeLog
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/appdata/org.gnome.Contacts.appdata.xml
+%{_datadir}/applications/org.gnome.Contacts.desktop
+%{_datadir}/dbus-1/services/org.gnome.Contacts.service
 %{_datadir}/dbus-1/services/org.gnome.Contacts.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
-%{_datadir}/gnome-shell/search-providers/gnome-contacts-search-provider.ini
+%{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
+%{_datadir}/gnome-shell/search-providers/org.gnome.Contacts.search-provider.ini
