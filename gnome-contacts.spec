@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(cheese) >= 3.6.0
 BuildRequires:	pkgconfig(cheese-gtk) >= 3.6.0
 BuildRequires:	pkgconfig(clutter-1.0)
+BuildRequires:	gobject-introspection-devel >= 0.9.5
 
 Requires:	telepathy-mission-control
 
