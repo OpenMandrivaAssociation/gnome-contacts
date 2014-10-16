@@ -11,6 +11,8 @@ Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{vers
 
 BuildRequires:	intltool
 BuildRequires:	vala
+BuildRequires:	vala-devel
+BuildRequires:	vala-tools
 BuildRequires:	pkgconfig(folks)
 BuildRequires:	pkgconfig(folks-eds)
 BuildRequires:	pkgconfig(folks-telepathy)
