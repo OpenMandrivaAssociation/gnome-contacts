@@ -1,13 +1,13 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	 3.16.2
+Version:	3.16.2
 Release:	2
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/ThreePointOne/Features/Contacts
-Source0:	ftp://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	intltool
 BuildRequires:	vala
@@ -26,6 +26,8 @@ BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(cheese) >= 3.6.0
 BuildRequires:	pkgconfig(cheese-gtk) >= 3.6.0
 BuildRequires:	pkgconfig(clutter-1.0)
+BuildRequires:	pkgconfig(champlain-0.12)
+BuildRequires:	pkgconfig(geocode-glib-1.0)
 BuildRequires:	gobject-introspection-devel >= 0.9.5
 
 Requires:	telepathy-mission-control
