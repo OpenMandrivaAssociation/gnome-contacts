@@ -1,8 +1,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.18.1
-Release:	4
+Version:	3.30
+Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -29,6 +29,11 @@ BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:	pkgconfig(geocode-glib-1.0)
 BuildRequires:	gobject-introspection-devel >= 0.9.5
+BuildRequires:  pkgconfig(gdk-x11-3.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(champlain-0.12)
+BuildRequires:  meson
+
 
 Requires:	telepathy-mission-control
 
@@ -40,11 +45,14 @@ Standalone contacts manager for GNOME desktop.
 %apply_patches
 
 %build
-%configure
-%make
+%meson -Dwith-cheese=yes
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
+
+#fix .desktop file
+desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.desktop
 
 %find_lang %{name}
 
