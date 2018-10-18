@@ -59,13 +59,13 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS README NEWS ChangeLog
+%doc AUTHORS NEWS
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
-%{_datadir}/appdata/org.gnome.Contacts.appdata.xml
+%{_datadir}/metainfo/org.gnome.Contacts.appdata.xml
 %{_datadir}/applications/org.gnome.Contacts.desktop
 %{_datadir}/dbus-1/services/org.gnome.Contacts.service
 %{_datadir}/dbus-1/services/org.gnome.Contacts.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
+#{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.Contacts.search-provider.ini
