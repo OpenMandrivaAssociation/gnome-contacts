@@ -33,6 +33,7 @@ BuildRequires:  pkgconfig(gdk-x11-3.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:  meson
+BuildRequires:  docbook-xsl
 
 
 Requires:	telepathy-mission-control
