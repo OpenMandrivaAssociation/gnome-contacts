@@ -34,6 +34,7 @@ BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:  meson
 BuildRequires:  docbook-xsl
+BuildRequires:  docbook-dtd-xml
 
 
 Requires:	telepathy-mission-control
