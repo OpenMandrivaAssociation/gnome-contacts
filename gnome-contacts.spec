@@ -1,8 +1,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.18.1
-Release:	4
+Version:	3.30
+Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -29,6 +29,13 @@ BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:	pkgconfig(geocode-glib-1.0)
 BuildRequires:	gobject-introspection-devel >= 0.9.5
+BuildRequires:  pkgconfig(gdk-x11-3.0)
+BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(champlain-0.12)
+BuildRequires:  meson
+BuildRequires:  docbook-xsl
+BuildRequires:  docbook-dtd-xml
+
 
 Requires:	telepathy-mission-control
 
@@ -40,22 +47,28 @@ Standalone contacts manager for GNOME desktop.
 %apply_patches
 
 %build
-%configure
-%make
+%meson -Dwith-cheese=yes
+%meson_build
 
 %install
-%makeinstall_std
+%meson_install
+
+#fix .desktop file
+desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.desktop
 
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS README NEWS ChangeLog
+%doc AUTHORS NEWS
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
-%{_datadir}/appdata/org.gnome.Contacts.appdata.xml
+%{_datadir}/metainfo/org.gnome.Contacts.appdata.xml
 %{_datadir}/applications/org.gnome.Contacts.desktop
 %{_datadir}/dbus-1/services/org.gnome.Contacts.service
 %{_datadir}/dbus-1/services/org.gnome.Contacts.SearchProvider.service
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
-%{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
+#{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.Contacts.search-provider.ini
+%{_iconsdir}/hicolor/*/apps/org.gnome.Contacts.png
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.Contacts*.svg
+%{_mandir}/man1/%{name}.1.*
