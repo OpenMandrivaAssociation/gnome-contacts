@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.30.2
+Version:	3.32
 Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
@@ -69,6 +69,13 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %{_datadir}/glib-2.0/schemas/org.gnome.Contacts.gschema.xml
 #{_datadir}/glib-2.0/schemas/org.gnome.Contacts.enums.xml
 %{_datadir}/gnome-shell/search-providers/org.gnome.Contacts.search-provider.ini
-%{_iconsdir}/hicolor/*/apps/org.gnome.Contacts.png
+%{_iconsdir}/hicolor/scalable/apps/org.gnome.Contacts.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Contacts*.svg
 %{_mandir}/man1/%{name}.1.*
+%{_includedir}/libhandy-0.0/*
+%{_libdir}/girepository-1.0/Handy-0.0.typelib
+%{_libdir}/libhandy-*
+%{_libdir}/pkgconfig/libhandy*
+%{_datadir}/gir-1.0/Handy-0.0.gir
+%{_datadir}/vala/vapi/libhandy-0.0.deps
+%{_datadir}/vala/vapi/libhandy-0.0.vapi
