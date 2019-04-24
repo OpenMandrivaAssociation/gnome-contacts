@@ -75,6 +75,7 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %{_includedir}/libhandy-0.0/*
 %{_libdir}/girepository-1.0/Handy-0.0.typelib
 %{_libdir}/libhandy-*
+%{_libdir}/pkgconfig/libhandy*
 %{_datadir}/gir-1.0/Handy-0.0.gir
 %{_datadir}/vala/vapi/libhandy-0.0.deps
 %{_datadir}/vala/vapi/libhandy-0.0.vapi
