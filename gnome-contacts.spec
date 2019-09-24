@@ -9,10 +9,12 @@ License:	GPLv2+
 Url:		https://live.gnome.org/ThreePointOne/Features/Contacts
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
+BuildRequires:  appstream-util
 BuildRequires:	intltool
 BuildRequires:	vala
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
+BuildRequires:  valadoc-devel
 BuildRequires:	pkgconfig(folks)
 BuildRequires:	pkgconfig(folks-eds)
 BuildRequires:	pkgconfig(folks-telepathy)
@@ -35,6 +37,7 @@ BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:  meson
 BuildRequires:  docbook-xsl
 BuildRequires:  docbook-dtd-xml
+BuildRequires:  xsltproc
 
 
 Requires:	telepathy-mission-control
