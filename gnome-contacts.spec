@@ -2,7 +2,7 @@
 
 Name:		gnome-contacts
 Version:	3.34
-Release:	1
+Release:	2
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -34,6 +34,7 @@ BuildRequires:	gobject-introspection-devel >= 0.9.5
 BuildRequires:  pkgconfig(gdk-x11-3.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(champlain-0.12)
+BuildRequires:  pkgconfig(libhandy-0.0)
 BuildRequires:  meson
 BuildRequires:  docbook-xsl
 BuildRequires:  docbook-dtd-xml
@@ -75,10 +76,3 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %{_iconsdir}/hicolor/scalable/apps/org.gnome.Contacts.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Contacts*.svg
 %{_mandir}/man1/%{name}.1.*
-%{_includedir}/libhandy-0.0/*
-%{_libdir}/girepository-1.0/Handy-0.0.typelib
-%{_libdir}/libhandy-*
-%{_libdir}/pkgconfig/libhandy*
-%{_datadir}/gir-1.0/Handy-0.0.gir
-%{_datadir}/vala/vapi/libhandy-0.0.deps
-%{_datadir}/vala/vapi/libhandy-0.0.vapi
