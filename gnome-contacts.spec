@@ -75,4 +75,4 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %{_datadir}/gnome-shell/search-providers/org.gnome.Contacts.search-provider.ini
 %{_iconsdir}/hicolor/scalable/apps/org.gnome.Contacts.svg
 %{_iconsdir}/hicolor/symbolic/apps/org.gnome.Contacts*.svg
-%{_mandir}/man1/%{name}.1.*
+%{_mandir}/man1/%{name}.*
