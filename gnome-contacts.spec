@@ -1,8 +1,8 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.34
-Release:	2
+Version:	3.34.1
+Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -48,7 +48,7 @@ Standalone contacts manager for GNOME desktop.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %meson -Dwith-cheese=yes
