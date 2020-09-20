@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.36.2
+Version:	3.38
 Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
@@ -34,7 +34,7 @@ BuildRequires:	gobject-introspection-devel >= 0.9.5
 BuildRequires:  pkgconfig(gdk-x11-3.0)
 BuildRequires:	pkgconfig(gtk+-3.0)
 BuildRequires:	pkgconfig(champlain-0.12)
-BuildRequires:  pkgconfig(libhandy-0.0)
+BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  meson
 BuildRequires:  docbook-xsl
 BuildRequires:  docbook-dtd-xml
