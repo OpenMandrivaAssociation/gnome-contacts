@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	3.38.1
+Version:	40.0
 Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
@@ -24,6 +24,7 @@ BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(goa-1.0)
 BuildRequires:	pkgconfig(libebook-1.2)
 BuildRequires:	pkgconfig(libedataserver-1.2)
+BuildRequires:  pkgconfig(libgdata)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:	pkgconfig(cheese) >= 3.6.0
 BuildRequires:	pkgconfig(cheese-gtk) >= 3.6.0
@@ -63,7 +64,7 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc AUTHORS NEWS
+%doc NEWS README.md
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
 %{_datadir}/metainfo/org.gnome.Contacts.appdata.xml
