@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	41.0
+Version:	42.0
 Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
@@ -33,7 +33,7 @@ BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:	pkgconfig(geocode-glib-1.0)
 BuildRequires:	gobject-introspection-devel >= 0.9.5
 BuildRequires:  pkgconfig(gdk-x11-3.0)
-BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:  pkgconfig(libhandy-1)
 BuildRequires:  meson
@@ -52,7 +52,7 @@ Standalone contacts manager for GNOME desktop.
 %autopatch -p1
 
 %build
-%meson -Dwith-cheese=yes
+%meson
 %meson_build
 
 %install
