@@ -28,6 +28,7 @@ BuildRequires:	pkgconfig(libedataserver-1.2)
 BuildRequires:  pkgconfig(libgdata)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:  pkgconfig(libportal)
+BuildRequires:  pkgconfig(libportal-gtk4)
 BuildRequires:	pkgconfig(cheese) >= 3.6.0
 BuildRequires:	pkgconfig(cheese-gtk) >= 3.6.0
 BuildRequires:	pkgconfig(clutter-1.0)
@@ -54,6 +55,8 @@ Standalone contacts manager for GNOME desktop.
 %autopatch -p1
 
 %build
+export CC=gcc
+export CXX=g++
 %meson
 %meson_build
 
