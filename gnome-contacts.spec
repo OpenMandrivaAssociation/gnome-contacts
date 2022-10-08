@@ -55,6 +55,9 @@ Standalone contacts manager for GNOME desktop.
 %autopatch -p1
 
 %build
+# Needed because build fail with Clang 15: 
+# error: non-void function 'contacts_nickname_chunk_constructor' should return a value [-Wreturn-type] 
+# g_return_if_fail (G_TYPE_CHECK_INSTANCE_TYPE (_tmp3_, FOLKS_TYPE_NAME_DETAILS));
 export CC=gcc
 export CXX=g++
 %meson
@@ -72,6 +75,7 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %doc NEWS README.md
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
+%{_libexecdir}/gnome-contacts/gnome-contacts-parser
 %{_datadir}/metainfo/org.gnome.Contacts.appdata.xml
 %{_datadir}/applications/org.gnome.Contacts.desktop
 %{_datadir}/dbus-1/services/org.gnome.Contacts.service
