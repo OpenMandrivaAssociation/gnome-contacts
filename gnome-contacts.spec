@@ -29,6 +29,7 @@ BuildRequires:  pkgconfig(libgdata)
 BuildRequires:	pkgconfig(libnotify)
 BuildRequires:  pkgconfig(libportal)
 BuildRequires:  pkgconfig(libportal-gtk4)
+BuildRequires:  pkgconfig(libqrencode)
 BuildRequires:	pkgconfig(cheese) >= 3.6.0
 BuildRequires:	pkgconfig(cheese-gtk) >= 3.6.0
 BuildRequires:	pkgconfig(clutter-1.0)
