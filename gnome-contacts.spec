@@ -1,13 +1,13 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	44.0
-Release:	2
+Version:	45
+Release:	0.beta.0
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
 Url:		https://live.gnome.org/ThreePointOne/Features/Contacts
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{name}/%{url_ver}/%{name}-%{version}.beta.tar.xz
 
 BuildRequires:  appstream-util
 BuildRequires:	intltool
@@ -52,7 +52,7 @@ Requires:	telepathy-mission-control
 Standalone contacts manager for GNOME desktop.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}.beta
 %autopatch -p1
 
 %build
