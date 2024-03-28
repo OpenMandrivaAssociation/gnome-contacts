@@ -1,7 +1,7 @@
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
 Name:		gnome-contacts
-Version:	45.1
+Version:	46.0
 Release:	1
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
