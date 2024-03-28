@@ -73,7 +73,7 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %find_lang %{name}
 
 %files -f %{name}.lang
-%doc NEWS README.md
+%doc README.md
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
 %{_libexecdir}/gnome-contacts/gnome-contacts-parser
