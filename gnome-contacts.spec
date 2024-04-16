@@ -2,7 +2,7 @@
 
 Name:		gnome-contacts
 Version:	46.0
-Release:	1
+Release:	2
 Summary:	Contacts manager for GNOME
 Group:		Graphical desktop/GNOME
 License:	GPLv2+
@@ -44,6 +44,8 @@ BuildRequires:  meson
 BuildRequires:  docbook-xsl
 BuildRequires:  docbook-dtd-xml
 BuildRequires:  xsltproc
+
+Requires:  folks
 
 
 Requires:	telepathy-mission-control
