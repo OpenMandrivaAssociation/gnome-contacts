@@ -54,8 +54,7 @@ Requires:	telepathy-mission-control
 Standalone contacts manager for GNOME desktop.
 
 %prep
-%setup -q -n %{name}-%{version}
-%autopatch -p1
+%autosetup -n %{name}-%{version} -p1
 
 %build
 # Needed because build fail with Clang 15: 
@@ -79,7 +78,7 @@ desktop-file-edit %{buildroot}%{_datadir}/applications/org.gnome.Contacts.deskto
 %{_bindir}/%{name}
 %{_libexecdir}/gnome-contacts-search-provider
 %{_libexecdir}/gnome-contacts/gnome-contacts-parser
-%{_datadir}/metainfo/org.gnome.Contacts.appdata.xml
+%{_datadir}/metainfo/org.gnome.Contacts.metainfo.xml
 %{_datadir}/applications/org.gnome.Contacts.desktop
 %{_datadir}/dbus-1/services/org.gnome.Contacts.service
 %{_datadir}/dbus-1/services/org.gnome.Contacts.SearchProvider.service
