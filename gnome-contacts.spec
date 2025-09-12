@@ -15,6 +15,7 @@ BuildRequires:	vala
 BuildRequires:	vala-devel
 BuildRequires:	vala-tools
 BuildRequires:  valadoc-devel
+BuildRequires:  pkgconfig(blueprint-compiler)
 BuildRequires:	pkgconfig(folks)
 BuildRequires:	pkgconfig(folks-eds)
 BuildRequires:	pkgconfig(folks-telepathy)
