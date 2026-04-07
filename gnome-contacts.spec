@@ -37,6 +37,7 @@ BuildRequires:	pkgconfig(cheese-gtk) >= 3.6.0
 BuildRequires:	pkgconfig(clutter-1.0)
 BuildRequires:	pkgconfig(champlain-0.12)
 BuildRequires:	pkgconfig(geocode-glib-1.0)
+BuildRequires:  pkgconfig(glycin-2)
 BuildRequires:	gobject-introspection-devel >= 0.9.5
 BuildRequires:  pkgconfig(gdk-x11-3.0)
 BuildRequires:	pkgconfig(gtk4)
