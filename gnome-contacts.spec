@@ -47,6 +47,7 @@ BuildRequires:  meson
 BuildRequires:  docbook-xsl
 BuildRequires:  docbook-dtd-xml
 BuildRequires:  xsltproc
+BuildRequires:  atomic-devel
 
 Requires:  folks
 
